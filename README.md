@@ -1,8 +1,9 @@
-Deploy-tool
+# Deploy-tool
 
 Copies data from SRC to DST while making a backup.
 
 ## Usage
+---
 --src DIR
 
 --dst DIR
@@ -20,4 +21,4 @@ Copies data from SRC to DST while making a backup.
 --file-type EXT
 
 -h --help
-
+### 
