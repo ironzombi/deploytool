@@ -2,23 +2,25 @@
 
 Copies data from SRC to DST while making a backup.
 
-## Usage
 ---
---src DIR
+## Usage
+    --src DIR
 
---dst DIR
+    --dst DIR
 
---backup DIR
+    --backup DIR
 
---dry-run
+    --dry-run
 
---verbose
+    --verbose
 
---prune
+    --prune
 
---force
+    --force
 
---file-type EXT
+    --file-type EXT
 
--h --help
+    -h --help\n
+    test
+
 ### 
