@@ -80,7 +80,7 @@ backup_prod = File.join(backup_dir, 'src_before')
 backup_test = File.join(backup_dir, 'dst_before')
 
 puts "Backup root #{BACKUP}"
-puts " creating backup at #{backup_dir}"
+puts " Creating backup at #{backup_dir}"
 unless DRY
   FileUtils.mkdir_p backup_prod
   FileUtils.mkdir_p backup_test
