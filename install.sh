@@ -40,6 +40,7 @@ if [[ "$confirm" =~ ^[Yy]$ ]]; then
 else
   echo "stopping install process"
 fi
-puts ".............."
-puts ""
-puts "Edit defaults.rb with your environment settings"
+echo ".............."
+echo ""
+echo "defaults with your environment settings"
+echo "or pass --src --dst to tool"
