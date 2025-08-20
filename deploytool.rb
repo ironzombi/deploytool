@@ -6,7 +6,6 @@ require 'optparse'
 require 'find'
 require 'fileutils'
 
-#Configure your default paths
 DEFAULTS = {
   src_dir: File.expand_path('./prod'),
   dst_dir: File.expand_path('./test'),
