@@ -7,8 +7,8 @@ require 'find'
 require 'fileutils'
 
 DEFAULTS = {
-  src_dir: File.expand_path('./prod'),
-  dst_dir: File.expand_path('./test'),
+  src_dir: File.expand_path('./test'),
+  dst_dir: File.expand_path('./prod'),
   backup_dir: File.expand_path('./backup')
 }.freeze
 
