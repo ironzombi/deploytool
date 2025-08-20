@@ -21,3 +21,6 @@ deploytool --src /home/user1/code/site-code --dst /var/www/webpage --file-type .
 
 Installs the script deploytool to your home drive $HOME/.bin $HOME/bin
 also adds manpage, which will require sudo access.
+
+#### Disclaimer
+yes this is useless, I get it.
