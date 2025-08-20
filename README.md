@@ -15,4 +15,4 @@ Copies data from SRC to DST while making a backup.
     -h --help
 
 ### 
-```deploytool --src /home/user1/code/site-code --dst /var/www/webpage --file-type .html 
+deploytool --src /home/user1/code/site-code --dst /var/www/webpage --file-type .html 
