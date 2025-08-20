@@ -26,7 +26,7 @@ install_script() {
   sudo chmod +x "$TARGET_DIR/deploytool"
   sleep 1
   echo "updating manpages - requires elevated privs"
-  sudo cp -v ./manpages/deploytool.1 /usr/local/share/man/man1/
+  sudo cp -v ./deploytool.1 /usr/local/share/man/man1/
   sleep 2
   sudo mandb
   echo "Done."
