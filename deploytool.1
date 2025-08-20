@@ -1,0 +1,43 @@
+.TH DEPLOYTOOL 20 "August 2025" "Version 1.0" "User Commands"
+.SH NAME
+deploytool \- a copies files from SRC to DST while also creating a backup
+.SH SYNOPSIS
+.B deploytool 
+[\fIOPTIONS\fR]
+.SH DESCRIPTION
+This script copies files of specific <FILETYPE> from SRC directory to DST directory
+.TP
+A backup is also created. This can be used to deploy from staging to prod.
+
+.SH OPTIONS
+.TP
+.B \-s, \-\-src DIR
+Set the Source directory for the copy.
+.TP
+.B \-d, \-\-dst DIR
+Set the Destination directory for the copy.
+.TP
+.B \-t, \-\-file-type EXT
+Where EXT is the file extension: ie .rb .c .py etc
+.TP
+.B \-v, \-\-verbose
+Enable verbose logging/output
+.TP
+.B \-p, \-\-prune
+Delete all files in the Destination Directory that do not exist in the Source directory.
+.TP
+.B \-f, \-\-force
+Ignore conditions that would prevent the copy from occuring
+.TP
+.B \-\-dry-run
+Run the command and do everything but doesnt do the copy, test run.
+.TP
+.B \-h, \-\-help
+Shows usage details/information.
+
+.SH AUTHOR
+Written by ironzombi.
+
+.SH SEE ALSO
+ruby(1)
+
