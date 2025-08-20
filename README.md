@@ -15,6 +15,9 @@ Copies data from SRC to DST while making a backup.
     -h --help
 
 deploytool --src /home/user1/code/site-code --dst /var/www/webpage --file-type .html 
+you have to update the DEFAULTS in deploytool or pass the --src --dst as above.
+the default locations are ./src and ./dst
+the default backup location will be in the current working directory.
 ### Install
 ```
 ./install.sh
