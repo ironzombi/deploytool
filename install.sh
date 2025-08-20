@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+# install script#
+###########################
+#for macos:
+# go get github.com/shirou/gopsutil/v3/net
+install_script() {
+  TARGET_DIR=""
+
+  # install location/dir
+  # make sure one of these exists 
+  if [ -d "$HOME/.bin" ]; then
+    TARGET_DIR="$HOME/.bin"
+  elif [ -d "/usr/local/bin" ]; then
+    TARGET_DIR="/usr/local/bin"
+  elif [ -d "/opt/bin" ]; then
+    TARGET_DIR="/opt/bin"
+  else
+    echo "No suitable install directory found!"
+    exit 1
+  fi
+
+  # copy the script and man page
+  echo "Installing to $TARGET_DIR..."
+  sleep 1
+  sudo cp -v ./deploytool.rb "$TARGET_DIR/deploytool"
+  sudo chmod +x "$TARGET_DIR/deploytool"
+  sleep 1
+  echo "updating manpages - requires elevated privs"
+  sudo cp -v ./manpages/deploytool.1 /usr/local/share/man/man1/
+  sleep 2
+  sudo mandb
+  echo "Done."
+}
+
+#run the script
+echo "This will install deploytool to $HOME/.bin"
+read -p "Proceed ? [y/n]: " confirm
+if [[ "$confirm" =~ ^[Yy]$ ]]; then
+  install_script
+else
+  echo "stopping install process"
+fi
