@@ -14,5 +14,10 @@ Copies data from SRC to DST while making a backup.
     --file-type EXT
     -h --help
 
-### 
 deploytool --src /home/user1/code/site-code --dst /var/www/webpage --file-type .html 
+### Install
+```
+./install.sh
+
+Installs the script deploytool to your home drive $HOME/.bin $HOME/bin
+also adds manpage, which will require sudo access.
