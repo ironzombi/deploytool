@@ -70,7 +70,6 @@ def collect_files(base)
   rels
 end
 
-
 src_files = collect_files(SRC)
 dst_files = collect_files(DST)
 
@@ -151,7 +150,7 @@ src_files.each do |rel|
   end
 end
 
-# Optional prune: remove .html in SITE that are not present in CODE
+# Optional prune: remove .<filetype> files in DST that are not present in SRC
 pruned = []
 if PRUNE
   (dst_files - src_files).each do |rel|
