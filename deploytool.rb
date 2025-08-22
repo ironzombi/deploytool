@@ -25,14 +25,14 @@ options = {
 
 OptionParser.new do |op|
   op.banner = "Usage: proeval [options]"
-  op.on('--prod DIR', 'Path to production directory') { |v| options[:src_dir] = File.expand_path(v) }
-  op.on('--test DIR', 'Path to test directory') { |v| options[:dst_dir] = File.expand_path(v) }
+  op.on('-s DIR', '--src DIR', 'Path to production directory') { |v| options[:src_dir] = File.expand_path(v) }
+  op.on('-d DIR', '--dst DIR', 'Path to test directory') { |v| options[:dst_dir] = File.expand_path(v) }
   op.on('--backup DIR', 'Path to backup directory') { |v| options[:backup_dir] = File.expand_path(v) }
   op.on('--dry-run', 'Print actions but nothing will be changed') { options[:dry_run] = true }
-  op.on('--verbose', 'Provide more information during run') { options[:verbose] = true }
-  op.on('--prune', 'Delete all files in test that do not exist in Prod') { options[:prune] = true }
-  op.on('--force', 'ignore warnings that may prevent completion') { options[:force] = true }
-  op.on('--file-type EXT', 'File extension to deploy (default: .html)') { |v| options[:file_type] = v.start_with?('.') ? v.downcase : ".#{v.downcase}" }
+  op.on('-v', '--verbose', 'Provide more information during run') { options[:verbose] = true }
+  op.on('-p', '--prune', 'Delete all files in test that do not exist in Prod') { options[:prune] = true }
+  op.on('-f', '--force', 'ignore warnings that may prevent completion') { options[:force] = true }
+  op.on('-t', '--file-type EXT', 'File extension to deploy (default: .html)') { |v| options[:file_type] = v.start_with?('.') ? v.downcase : ".#{v.downcase}" }
   op.on('-h', '--help', 'Show help/usage') { puts op; exit }
 end.parse!
 
